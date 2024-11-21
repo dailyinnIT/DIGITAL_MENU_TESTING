@@ -16,3 +16,15 @@ document.getElementById("orderButton").addEventListener("click", function() {
     window.location.href = whatsappURL;  // Gunakan window.location.href untuk membuka WhatsApp di tab yang sama
 
 });
+
+// Menambahkan fungsi kembali menggunakan JavaScript
+document.getElementById("backButton").addEventListener("click", function() {
+    window.history.back();  // Kembali ke halaman sebelumnya
+});
+
+function limitInput(input) {
+    // Memotong input menjadi maksimal 3 angka
+    if (input.value.length > 3) {
+        input.value = input.value.slice(0, 3);
+    }
+}

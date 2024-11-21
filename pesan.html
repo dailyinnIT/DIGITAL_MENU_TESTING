@@ -6,20 +6,26 @@
     <title>Form Pesan</title>
     <link rel="stylesheet" href="style.css">
 
-     <!--favicon-->
-     <link rel="icon" href="assets/img/logo/Hotel Branding.png" type="image/x-icon">
+    <!--favicon-->
+    <link rel="icon" href="assets/img/logo/Hotel Branding.png" type="image/x-icon">
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li><a href="index.html" class="back-button">Back to Menu</a></li>
+        </ul>
+    </nav>
+
+    <!-- Konten Utama -->
     <div class="form-container">
         <h2>Pesan Menu</h2>
         <label for="roomNumber">Masukkan Nomor Kamar:</label>
-        <input type="text" id="roomNumber" placeholder="Contoh: 101" required>
+        <h1>⠀</h1>                                                           
+        <input type="number" id="roomNumber" placeholder="Contoh: 101" required maxlength="3" oninput="limitInput(this)">
         <button id="orderButton">Pesan Sekarang</button>
     </div>
 
-    <script src="scripts.js"></script>
-</body>
-<h1>⠀
     <h1>⠀
         <h1>⠀
             <h1>⠀
@@ -27,19 +33,23 @@
                     <h1>⠀
                         <h1>⠀
                             <h1>⠀
-                                <h1>⠀ 
-                                </h1>                               
-                            </h1>                           
-                        </h1>                       
-                    </h1>                   
+                                <h1>⠀
+                                    <h1>⠀ 
+                                    </h1>                               
+                                </h1>                           
+                            </h1>                       
+                        </h1>                   
+                    </h1> 
                 </h1> 
             </h1> 
         </h1> 
-    </h1> 
-</h1>
+    </h1>
 
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Hotel DailyInn. All rights reserved.</p>
+    </footer>
 
-<footer>
-    <p>&copy; 2024 Hotel DailyInn. All rights reserved.</p>
-</footer>
+    <script src="scripts.js"></script>
+</body>
 </html>

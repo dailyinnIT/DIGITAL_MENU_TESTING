@@ -997,21 +997,33 @@ h2 {
 
 
 /* Floating Button */
+/* Floating Button */
 .floating-button {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 50px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-    z-index: 1000;
-    transition: transform 0.3s ease;
+    bottom: 80px; /* Jarak dari bawah halaman (di atas footer) */
+    right: 20px; /* Jarak dari sisi kanan */
+    z-index: 1000; /* Agar tombol tetap terlihat di atas konten lain */
 }
+
+.floating-button a {
+    display: inline-block;
+    background-color: #28a745; /* Warna hijau */
+    color: white;
+    font-size: 18px; /* Ukuran teks lebih besar */
+    font-weight: bold;
+    padding: 15px 25px; /* Ukuran tombol lebih besar */
+    border-radius: 30px; /* Membuat tombol berbentuk elips */
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Bayangan untuk efek melayang */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-button a:hover {
+    background-color: #218838; /* Warna saat di-hover */
+    transform: scale(1.1); /* Efek zoom saat di-hover */
+}
+
 
 .floating-button:hover {
     transform: scale(1.1);
