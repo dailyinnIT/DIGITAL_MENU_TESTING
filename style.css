@@ -160,7 +160,9 @@ body {
 }
 
 .small-input {
-    width: 100px; /* Mengatur lebar kotak input */
-    padding: 5px; /* Mengatur ruang dalam (opsional) */
-    font-size: 14px; /* Mengatur ukuran teks (opsional) */
+        width: 20px;  /* Lebar kotak input lebih kecil */
+        height: 30px; /* Menyesuaikan tinggi kotak input */
+        font-size: 16px; /* Ukuran font untuk kenyamanan pengguna */
+        text-align: center; /* Menempatkan teks di tengah */
+        padding: 5px;  /* Memberikan sedikit ruang dalam kotak */
 }
