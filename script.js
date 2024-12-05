@@ -224,22 +224,32 @@ document.getElementById("orderButton").addEventListener("click", function() {
 });
 
 
-
-function checkTime() {
+function redirectToPage() {
     var currentDate = new Date();
     var currentHour = currentDate.getHours();  // Mendapatkan jam saat ini
 
-    var link = document.getElementById("pesanLink");
-
     if (currentHour >= 7 && currentHour < 21) {
-        // Jika jam antara 7 pagi hingga 9 malam, link bisa diakses
-        link.classList.remove("disabled");
-        link.href = "pesan.html";  // Link aktif
+        // Jam 7 pagi sampai jam 9 malam
+        window.location.href = "pesan.html";  // Redirect ke pesan.html
     } else {
-        // Jika jam diluar jam 7 pagi hingga 9 malam, link tidak bisa diakses
-        link.classList.add("disabled");
-        link.href = "#";  // Link tidak mengarah ke mana-mana
+        // Jam 9 malam sampai jam 7 pagi
+        window.location.href = "kontak.html";  // Redirect ke kontak.html
     }
 }
 
-window.onload = checkTime;  // Menjalankan fungsi saat halaman dimuat
+// Set link sesuai waktu saat halaman dimuat
+function checkTime() {
+    var currentDate = new Date();
+    var currentHour = currentDate.getHours();  // Mendapatkan jam saat ini
+    var link = document.getElementById("pesanLink");
+
+    if (currentHour >= 7 && currentHour < 21) {
+        link.innerHTML = "Pesan Sekarang";  // Mengubah teks tombol
+    } else {
+        link.innerHTML = "Kontak Kami";  // Mengubah teks tombol
+    }
+}
+
+window.onload = function() {
+    checkTime();  // Set teks tombol berdasarkan waktu saat halaman dimuat
+};
