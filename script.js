@@ -223,3 +223,23 @@ document.getElementById("orderButton").addEventListener("click", function() {
     overlay.style.display = "none"; // Sembunyikan overlay
 });
 
+
+
+function checkTime() {
+    var currentDate = new Date();
+    var currentHour = currentDate.getHours();  // Mendapatkan jam saat ini
+
+    var link = document.getElementById("pesanLink");
+
+    if (currentHour >= 7 && currentHour < 21) {
+        // Jika jam antara 7 pagi hingga 9 malam, link bisa diakses
+        link.classList.remove("disabled");
+        link.href = "pesan.html";  // Link aktif
+    } else {
+        // Jika jam diluar jam 7 pagi hingga 9 malam, link tidak bisa diakses
+        link.classList.add("disabled");
+        link.href = "#";  // Link tidak mengarah ke mana-mana
+    }
+}
+
+window.onload = checkTime;  // Menjalankan fungsi saat halaman dimuat
