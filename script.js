@@ -233,7 +233,7 @@ function redirectToPage() {
         window.location.href = "pesan.html";  // Redirect ke pesan.html
     } else {
         // Jam 9 malam sampai jam 7 pagi
-        window.location.href = "kontak.html";  // Redirect ke kontak.html
+        window.location.href = "tutup.html";  // Redirect ke tutup.html
     }
 }
 
@@ -246,7 +246,7 @@ function checkTime() {
     if (currentHour >= 7 && currentHour < 21) {
         link.innerHTML = "Pesan Sekarang";  // Mengubah teks tombol
     } else {
-        link.innerHTML = "Kontak Kami";  // Mengubah teks tombol
+        link.innerHTML = "tutup";  // Mengubah teks tombol
     }
 }
 
